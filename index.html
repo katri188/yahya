@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<form action="/login" method="POST">
+    <label>اختيار الدور:</label>
+    <select name="role">
+        <option value="user">مستخدم</option>
+        <option value="admin">إدمن</option>
+    </select>
+    <br>
+    <label>كلمة السر:</label>
+    <input type="password" name="password" required>
+    <br>
+    <button type="submit">تسجيل الدخول</button>
+</form>

